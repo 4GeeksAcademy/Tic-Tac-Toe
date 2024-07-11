@@ -1,12 +1,71 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(75, 75, 75);
+  color: white;
+}
 
-/* 
+h1 {
+  text-align: center;
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+.board {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+  cursor: pointer;
+  position: relative;
+}
 
-*/
+.tile {
+  color: currentColor;
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rightBorder {
+  border-right: 0.2em solid #757a7c;
+}
+
+.bottomBorder {
+  border-bottom: 0.2em solid #757a7c;
+}
+
+.gameOver {
+  text-align: center;
+  border: #9c9c9c 8px;
+  border-style: dotted;
+  padding: 10px;
+  margin-top: 50px;
+  font-size: 1.5em;
+}
+
+.resetButton {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #000000;
+  color: white;
+  width: 100%;
+  font-size: 1.5em;
+}
+
+.symbol-button {
+  background-color: #726d79;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  margin-right: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.symbol-button.selected {
+  background-color: #27252a;
+}
+
+.symbol-button:hover {
+  background-color: #27252a;
+}
